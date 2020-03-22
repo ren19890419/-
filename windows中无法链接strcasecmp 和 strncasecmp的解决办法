@@ -1,0 +1,17 @@
+中无法链接strcasecmp 和 strncasecmp的解决办法
+Ever tried to port from linux to windows and got the :
+
+error C3861: 'strcasecmp': identifier not found
+
+The easiest workaround is to add a  conditional define (visual studio add the –D _WIN32 or _WIN64 depending your OS) and define the following mappings:
+
+#if defined(_WIN32) || defined(_WIN64) 
+  #define snprintf _snprintf 
+  #define vsnprintf _vsnprintf 
+  #define strcasecmp _stricmp 
+  #define strncasecmp _strnicmp 
+#endif
+
+Another common missing identifier is the Uint which can be solved adding:
+
+#define uint=unsigned int
