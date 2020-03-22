@@ -1,0 +1,351 @@
+kbengine_ue4_mmo  lua 框架开发进度
+
+
+Revision: 9f2a3ef8e4ed3f07fddc6d5bb036065dadb914c4
+Date: 2020/3/22 14:13:49
+Message: commit: add bit lib json lib for lua
+
+Revision: 24bd3cf032a4882843a3b811bbe41f4ba72fb674
+Date: 2020/3/18 20:23:12
+Message: commit: thinker_helper lib
+
+Revision: 2571124629c035065a2f0e6a7ee8edad9e54794b
+Date: 2020/3/9 23:55:19
+Message: commit: ULevelStreamingDynamic 子关卡加载和卸载功能测试
+
+Revision: f0764b1f5f0562033faebe9276358c5809c916d1
+Date: 2020/3/9 12:53:12
+Message: commit: update engine to 4.26
+
+Revision: 842a0d2c68c5a878783a0b95530283f449333ec8
+Date: 2020/2/23 23:00:09
+Message: commit: project file
+
+Revision: 07db35aa670b773c835ae733d95bda3284d4dc73
+Date: 2020/2/23 22:57:24
+Message: commit: luasocket lpeg 集成网络调试器
+
+Revision: 2b287b915116254be3d59aea7f6cf843d580843c
+Date: 2020/2/17 9:36:18
+Message: commit: Lua_PrintCppStack
+
+Revision: 991a386339e0f5303f66d5340c812f23540fd674
+Date: 2020/2/13 20:33:53
+Message: commit: IsValid
+
+Revision: 2fde312a5775256185dd82f8dab18112de5d13a2
+Date: 2020/2/9 18:40:07
+Message: commit: ui->UI
+
+Revision: 16a5b9ef80952c34c64548a5ce866c85c4d1f5c8
+Date: 2020/2/9 18:34:34
+Message: commit: 选角界面
+
+Revision: 5b384acc9f7f82e4014d9e8b0cdd33b721f9a468
+Date: 2020/2/9 18:31:44
+Message: commit: kbengine调通 登录选角色流程
+
+Revision: 73a24d0fe9f7c1a5fa25ecf94f75a9192e8c7e54
+Date: 2020/2/8 0:46:30
+Message: commit: 调通登陆逻辑模块
+
+Revision: c6b7e85e58a5132f36077c639b4405576e869431
+Date: 2020/2/8 0:39:52
+Message: commit: 调通登陆逻辑模块
+
+Revision: 13591997c852e5b621de87c6c07ca8a57cfd8ab7
+Date: 2020/2/7 22:21:02
+Message: commit: 升级kbe插件 增加新字体 开始接kbe服务器
+
+Revision: cbf5a144f878fb1031040ec27b7e58eb0851fb43
+Date: 2020/2/5 5:53:56
+Message: commit: KBEEngine 接入 ImageLoader 函数升级
+
+Revision: 4e1675a68acdc25ef8040f1cacbc9b3b76a2e66e
+Date: 2020/1/19 23:23:58
+Message: commit: DraggableWindow 移出做单独的模块
+
+Revision: 1418afccffe90713cfdf5b115600db5546fb3016
+Date: 2020/1/19 21:21:14
+Message: commit: __setnewindex
+
+Revision: 5e4fc33e73558242ff77af46fcedd9ee0bd00180
+Date: 2020/1/18 23:45:41
+Message: commit: add RuntimeMeshComponent
+
+Revision: 6d973a386882e2cefc939a9ee53675b55d94a7ac
+Date: 2020/1/12 23:24:55
+Message: commit: 启用CatchMeGameViewportClient 增加CatchMeLoadingScreen
+
+Revision: 9c4cbdd760156ffffbc8c6c7b4177365fdcd24f0
+Date: 2020/1/12 21:48:55
+Message: commit: CatchMeGameViewportClient
+
+Revision: 69f182e62dea4a0a66e9cc6a27f0d2b4c0feb307
+Date: 2020/1/12 21:33:06
+Message: commit: DraggableWindow
+
+Revision: 5059a1117d8b57482c7f089517f90bd7474c3b28
+Date: 2020/1/6 22:52:52
+Message: commit: 移动测试代码位置
+
+Revision: e40f2e172c84803c08e6c193d0728ee2594556b1
+Date: 2020/1/6 22:41:45
+Message: commit: 移动位置
+
+Revision: 84fb8adb348206fd4d42291ca333d0794c2b9c44
+Date: 2020/1/6 22:38:39
+Message: commit: 改成大写
+
+Revision: 951ebd08f36a695221212b7222ec6e782ebf96c2
+Date: 2020/1/5 18:19:37
+Message: commit: Tostring 方便调试 增加wasd移动和摇杆移动
+
+Revision: a234218d7bd818d933ae63f01d111b5680067f77
+Date: 2019/12/29 14:08:53
+Message: commit: FProperty 导出到lua 以及gc相关
+
+Revision: 308348c30ad39743b026e7c22de033c2c152c30c
+Date: 2019/12/28 23:53:18
+Message: commit: EndPlay 之后lua侧gcCpp对象后cpp侧不能再继续调用lua侧对象方法
+
+Revision: be8584ddf1c026e827fecce601fc256750d65b2d
+Date: 2019/12/27 0:17:46
+Message: commit: 恢复小地图
+
+Revision: b952685b3fef6e12b67d5464d6f940731bee5531
+Date: 2019/12/27 0:17:11
+Message: commit: Lua VM进入游戏的时候才创建 界面统一放到 UI/UMG 下面
+
+Revision: adaf752547a4354f42bc21e60d13123a7b034947
+Date: 2019/12/26 21:37:51
+Message: commit: UProperty的GetOuter 切换到 FProperty的GetOwner
+
+Revision: 493023cadb5d88df06be46b9f8b4329e88c4240d
+Date: 2019/12/25 22:51:17
+Message: pull --progress -v --no-rebase origin: Fast-forward
+
+Revision: 40016d077d42bd0d9b0383b74329d871626f5673
+Date: 2019/12/20 22:47:50
+Message: commit: 生成的lua头文件放项目生成中间文件夹中，Uproperty->FProperty
+
+Revision: 3c890d729f8ec27eec60b4f46c42103ddcbc4e6d
+Date: 2019/12/15 20:47:39
+Message: pull --progress -v --no-rebase origin: Merge made by the 'recursive' strategy.
+
+Revision: 0b08f9a08209cce104c29c99dd7c613f6afac6f2
+Date: 2019/12/15 20:46:29
+Message: commit: upgrade to 4.25
+
+Revision: 690b9e4559b91e19ade289242d01302c20dfc416
+Date: 2019/11/23 13:09:08
+Message: commit: 工程配置修改
+
+Revision: 1f790941d5d3f2a28309a2f889778eb387322e60
+Date: 2019/11/23 12:27:10
+Message: commit: LuaSyntaxCheck 支持命令行传如参数 检查的文件或文件夹
+
+Revision: ef421dd8acd5b83dead1253966d1da3479b05cb6
+Date: 2019/11/23 11:55:55
+Message: commit: luaL_dofile_checkbom 增加 UTF-8 带BOM头的Lua文件的加载
+
+Revision: 66fc9bc444b8c4130f93a528c70f2346b6d4c7d3
+Date: 2019/9/28 22:06:16
+Message: commit: print warn error and sublime project
+
+Revision: 2d3d745bd08a1d9303c395d4bb5cf023b77ca468
+Date: 2019/9/28 20:18:49
+Message: commit: upgrade to 4.24 (2019/9/28)
+
+Revision: 9dd256bec32c86caf40050914af5228771a4b4c7
+Date: 2019/6/16 22:32:21
+Message: commit: update to UE4.24
+
+Revision: a68dd426155f87a99305cb4fc276502df07d5fda
+Date: 2019/6/16 12:33:54
+Message: commit: VaTexAtlas
+
+Revision: e72aa988b3c44ccc126b0a477b438447d7641fdb
+Date: 2019/6/9 14:16:19
+Message: commit: ImageLoader.cpp Async cannot use templated fixed
+
+Revision: ba9eadd0ee594ef83818adb2c6c0b665ab47136c
+Date: 2019/5/12 23:46:11
+Message: commit: add SparseDelegate UUInt16Property Export
+
+Revision: 4aed0f97b95a084004d2ae227773ba52ad3aaf57
+Date: 2019/5/11 14:02:48
+Message: commit: add SparseDelegate
+
+Revision: 432c03f1e87f234240d3f2ac66f1e2f902746c93
+Date: 2019/2/11 22:14:15
+Message: commit: update engine to 4.23
+
+Revision: 9d268fe977ed0773996015ac39fcd88692f68418
+Date: 2019/1/28 23:16:52
+Message: pull --progress -v --no-rebase origin: Fast-forward
+
+Revision: cd334b4e0f0a8dca8d1ab8bf73fe228a6ca1da7f
+Date: 2019/1/27 22:30:00
+Message: commit: serpent
+
+Revision: 43a569301e4f9f8c074db9d688426b08845e74ca
+Date: 2019/1/27 22:26:09
+Message: commit: lua-messagepack-0.5.1.tar.gz
+
+Revision: 424dfbb65b051a15941713e6770b3c030f234d66
+Date: 2019/1/22 23:21:50
+Message: commit: luauint
+
+Revision: f55e2323f8b568e1477bd71d8d775a99f42f3e59
+Date: 2019/1/20 23:04:31
+Message: commit: lua-protobuf
+
+Revision: cfdb21ec71c5d5b66820b02376537625f27900c3
+Date: 2019/1/20 20:02:29
+Message: commit: toos for lua stack check -->StackGuard.h
+
+Revision: 609a41cbf9f6a178b3e465ba64cef0893422e976
+Date: 2019/1/20 14:34:11
+Message: commit: Lua test project configure
+
+Revision: dcd680f1e028ae03d33bd1972404bba2ef8210b4
+Date: 2019/1/20 14:18:24
+Message: pull --progress -v --no-rebase origin: Fast-forward
+
+Revision: b9a2e22ab5248302ed4cf1b0461854ffa9e09314
+Date: 2019/1/20 13:32:23
+Message: commit: refres engines struct
+
+Revision: e38681b89f08aa4373345450edbfd906543fe216
+Date: 2019/1/20 1:53:54
+Message: commit: Use EngineSourceDir Relative script.lua.h
+
+Revision: 5af8a45ca0b49ca8d04a52b00253a2859a0fd9a6
+Date: 2019/1/19 12:06:35
+Message: commit: generated lua.h header use relatived path..
+
+Revision: 11d2710e75d3e4a1a7e50f75cb5ff90c31f4ba6b
+Date: 2019/1/17 23:44:16
+Message: commit: undefined __cplusplus
+
+Revision: 58af7331fd993a8046dccc27165bdd203710c7eb
+Date: 2019/1/17 23:34:38
+Message: commit: kbengine_ue4_plugins
+
+Revision: 60f6a0459afe00901520bfdacfa4d07c778e655d
+Date: 2019/1/17 22:30:57
+Message: commit: kbengine_ue4_plugins
+
+Revision: 64ea1aef550e9163349b112df297cf930c74f402
+Date: 2019/1/16 9:06:26
+Message: commit: Intergrated Bugly
+
+Revision: e0e4c88dce7b07b20742809175b85e8653c5d419
+Date: 2019/1/15 22:13:41
+Message: commit: changing case for a directory
+
+Revision: 14a85e0486b0d51f035425918c01c28027dc5593
+Date: 2019/1/14 23:04:44
+Message: commit: build tools
+
+Revision: 87fc4c98b035f5e90ec285d63fa6b7b1f43a7f8a
+Date: 2019/1/14 23:01:40
+Message: commit: fixed compile errors
+
+Revision: 531397c6ccd0d8e0485df62b98088c61af7e775a
+Date: 2019/1/14 22:19:39
+Message: commit: Added Tools Folder
+
+Revision: c2bdf326380f102083aacd8d1be6c0b28b063266
+Date: 2019/1/14 21:57:37
+Message: pull --progress -v --no-rebase origin: Fast-forward
+
+Revision: af67c54792fa7edadf92e62af9c827ab62a673b1
+Date: 2019/1/13 22:49:09
+Message: commit: change map size
+
+Revision: 31b651c0c3af37a1adaa6c4f2cd9cf3a8a76398f
+Date: 2019/1/13 21:25:40
+Message: commit: eliminate some warnings;
+
+Revision: fac7ea404bd9642012bdc78b52184080a212214b
+Date: 2019/1/13 20:33:24
+Message: commit: use common lua lib
+
+Revision: e271503bc2684de7383e58e128e4dfd7dd8130d0
+Date: 2019/1/13 19:19:34
+Message: commit: lua lib
+
+Revision: 0dfd50c2c045fc317e16efcd676d3c51b02a9545
+Date: 2019/1/13 17:59:42
+Message: commit: solution
+
+Revision: 4e303c7fe691eae0fb8e2d0fd86e9aee70ccbbac
+Date: 2019/1/13 17:57:21
+Message: pull --progress -v --no-rebase origin: Fast-forward
+
+Revision: c7847ebbd9d29c1c9af59c651fa8491e6cefda34
+Date: 2019/1/13 17:03:02
+Message: commit: jumction batch file
+
+Revision: b57cfa6b8409487a8683b43837e71ec455a9e554
+Date: 2019/1/13 16:41:30
+Message: commit: added project
+
+Revision: 494c2fc7426bbbfbcb997298311e8c5df8bdda8e
+Date: 2019/1/6 20:34:30
+Message: pull --progress -v --no-rebase origin: Merge made by the 'recursive' strategy.
+
+Revision: ae6d87cae949ba72341e56a6b7ecd0b6af0c9752
+Date: 2019/1/6 20:34:07
+Message: commit (amend): Merge branch 'master' of https://github.com/ren19890419/kbengine_ue4_mmo
+
+Revision: aa8612ec6e3b502d0f937679256e458f8d656a42
+Date: 2019/1/6 20:28:34
+Message: commit (merge): Merge branch 'master' of https://github.com/ren19890419/kbengine_ue4_mmo
+
+Revision: 8c1d9ef521ad913cf5f51484a205f253b13ead74
+Date: 2019/1/6 20:26:45
+Message: commit (amend): Update README.md
+
+Revision: e9d2072aab989e45dd90c383bad774e97092eb58
+Date: 2019/1/6 20:21:56
+Message: pull --progress -v --no-rebase origin: Fast-forward
+
+Revision: 0c34574e062ea96dd3820c391ed9685fd45b91c1
+Date: 2019/1/6 20:19:44
+Message: commit: kbe submodule
+
+Revision: a994bc8fcb9a8576f13200cb27ad397b34ae9f94
+Date: 2019/1/6 20:12:48
+Message: commit: remove
+
+Revision: ccfcd48b5f7d5f567db9382ca3c9e8c941f99bf6
+Date: 2019/1/6 20:11:43
+Message: commit: remove
+
+Revision: bee76d245c4d884de218ab6311a80f1ed69b6b46
+Date: 2019/1/6 20:01:40
+Message: commit: remove submodule
+
+Revision: 4bda5bc02909a4fdf9ce3ef9d7ad04a037f91c3a
+Date: 2018/11/11 16:15:41
+Message: pull --progress -v --no-rebase origin: Merge made by the 'recursive' strategy.
+
+Revision: 7e569fe4f5e5d96275fcba9d4e4216bcef542d76
+Date: 2018/11/11 16:14:46
+Message: commit: submodule
+
+Revision: abcfbe0be613dc62fcf48f4d3eeef690a8f4b024
+Date: 2018/11/11 16:13:59
+Message: commit: project
+
+Revision: 84dbb423f68b55604948a3a30e3861b5b6270f32
+Date: 2018/11/10 22:17:53
+Message: commit: initial
+
+Revision: 18a25418b455ad83024d9f91a219c8e0645ecded
+Date: 2018/11/10 21:57:20
+Message: clone: from https://github.com/ren19890419/kbengine_ue4_mmo.git
+
