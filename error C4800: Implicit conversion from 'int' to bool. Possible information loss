@@ -1,6 +1,10 @@
  error C4800: Implicit conversion from 'int' to bool. Possible information loss
  解决办法，禁掉
- #pragma warning(disable: 4189)
+#if defined( _MSC_VER )
+#pragma warning(disable: 4800)
+#endif
 	char s;
 　s = 128;
-#pragma warning(default: 4189)
+#if defined( _MSC_VER )
+#pragma warning(default: 4800)
+#endif
