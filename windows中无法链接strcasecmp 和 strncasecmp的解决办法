@@ -15,3 +15,39 @@ The easiest workaround is to add a  conditional define (visual studio add the �
 Another common missing identifier is the Uint which can be solved adding:
 
 #define uint=unsigned int
+
+
+在.h文文件中添加如下声明:
+
+#ifdef _MSC_VER
+int strcasecmp(char *s1, char *s2);
+int strncasecmp(char *s1, char *s2, register int n);
+#endif
+
+在.c文件中添加如下实现
+
+ #ifdef _MSC_VER
+int strcasecmp(char *s1, char *s2)
+{
+   while  (toupper((unsigned char)*s1) == toupper((unsigned char)*s2++))
+       if (*s1++ == '') return 0;
+   return(toupper((unsigned char)*s1) - toupper((unsigned char)*--s2));
+}
+
+int strncasecmp(char *s1, char *s2, register int n)
+{
+  while (--n >= 0 && toupper((unsigned char)*s1) == toupper((unsigned char)*s2++))
+      if (*s1++ == '')  return 0;
+  return(n < 0 ? 0 : toupper((unsigned char)*s1) - toupper((unsigned char)*--s2));
+}
+#endif
+ 
+
+另外一个比较简单的办法是用VC SDK中的函数来代替如下：
+
+ 
+
+#ifdef _MSC_VER
+#define strcasecmp stricmp
+#define strncasecmp  strnicmp 
+#endif
