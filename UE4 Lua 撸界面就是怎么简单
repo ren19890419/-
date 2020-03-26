@@ -1,0 +1,23 @@
+示例：
+local BaseUI = require "BaseUI"
+local UIPanelSelectAvatar = Inherit(BaseUI)
+
+
+function UIPanelSelectAvatar:Ctor(controller)
+	local EnterGameBtn = self:FindDirect("EnterGameBtn")
+	--点击事件绑定
+	EnterGameBtn.OnClicked:Add(CallBack(self.OnEnterGameBtn, self))
+	EnterGameBtn.OnPressed:Add(CallBack(self.OnEnterGameBtnPressed, self))
+	self.Controller = controller
+end
+
+--进入游戏
+function UIPanelSelectAvatar:OnEnterGameBtn()
+	print("OnEnterGameBtn", self:GetName(), self:FindDirect("EnterGameBtn"):GetName())
+end
+
+function UIPanelSelectAvatar:OnEnterGameBtnPressed()
+	print("OnEnterGameBtnPressed", self:GetName(), self:FindDirect("EnterGameBtn"):GetName())
+end
+
+return UIPanelSelectAvatar
