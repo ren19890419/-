@@ -1,0 +1,17 @@
+ 	>	UE4Editor-ProceduralMeshComponent.dll!FProceduralMeshSceneProxy::GetDynamicMeshElements(const TArray<FSceneView const *,TSizedDefaultAllocator<32>> & Views, const FSceneViewFamily & ViewFamily, unsigned int VisibilityMap, FMeshElementCollector & Collector) Line 316	C++
+ 	UE4Editor-Renderer.dll!FSceneRenderer::GatherDynamicMeshElements(TArray<FViewInfo,TSizedDefaultAllocator<32>> & InViews, const FScene * InScene, const FSceneViewFamily & InViewFamily, FGlobalDynamicIndexBuffer & DynamicIndexBuffer, FGlobalDynamicVertexBuffer & DynamicVertexBuffer, FGlobalDynamicReadBuffer & DynamicReadBuffer, const TArray<unsigned char,TMemStackAllocator<0>> & HasDynamicMeshElementsMasks, const TArray<unsigned char,TMemStackAllocator<0>> & HasDynamicEditorMeshElementsMasks, const TArray<unsigned char,TMemStackAllocator<0>> & HasViewCustomDataMasks, FMeshElementCollector & Collector) Line 2935	C++
+ 	UE4Editor-Renderer.dll!FSceneRenderer::ComputeViewVisibility(FRHICommandListImmediate & RHICmdList, FExclusiveDepthStencil::Type BasePassDepthStencilAccess, TArray<FViewCommands,TInlineAllocator<4,TSizedDefaultAllocator<32>>> & ViewCommandsPerView, FGlobalDynamicIndexBuffer & DynamicIndexBuffer, FGlobalDynamicVertexBuffer & DynamicVertexBuffer, FGlobalDynamicReadBuffer & DynamicReadBuffer) Line 4023	C++
+ 	UE4Editor-Renderer.dll!FDeferredShadingSceneRenderer::InitViews(FRHICommandListImmediate & RHICmdList, FExclusiveDepthStencil::Type BasePassDepthStencilAccess, FILCUpdatePrimTaskData & ILCTaskData, TArray<TRefCountPtr<FGraphEvent>,TInlineAllocator<4,TSizedDefaultAllocator<32>>> & UpdateViewCustomDataEvents) Line 4322	C++
+ 	UE4Editor-Renderer.dll!FDeferredShadingSceneRenderer::Render(FRHICommandListImmediate & RHICmdList) Line 1368	C++
+ 	UE4Editor-Renderer.dll!RenderViewFamily_RenderThread(FRHICommandListImmediate & RHICmdList, FSceneRenderer * SceneRenderer) Line 3487	C++
+ 	[Inline Frame] UE4Editor-Renderer.dll!FRendererModule::BeginRenderingViewFamily::__l35::<lambda_759d0c4589f205101b108f5da3fb1556>::operator()(FRHICommandListImmediate &) Line 3722	C++
+
+	UE4Editor-Renderer.dll!FRendererModule::BeginRenderingViewFamily(FCanvas * Canvas, FSceneViewFamily * ViewFamily) Line 3624	C++
+ 	UE4Editor-Engine.dll!UGameViewportClient::Draw(FViewport * InViewport, FCanvas * SceneCanvas) Line 1592	C++
+ 	UE4Editor-Engine.dll!FViewport::Draw(bool bShouldPresent) Line 1543	C++
+ 	UE4Editor-UnrealEd.dll!UEditorEngine::Tick(float DeltaSeconds, bool bIdleMode) Line 1913	C++
+ 	UE4Editor-UnrealEd.dll!UUnrealEdEngine::Tick(float DeltaSeconds, bool bIdleMode) Line 427	C++
+>	UE4Editor-Win64-DebugGame.exe!FEngineLoop::Tick() Line 4845	C++
+ 	[Inline Frame] UE4Editor-Win64-DebugGame.exe!EngineTick() Line 62	C++
+ 	UE4Editor-Win64-DebugGame.exe!GuardedMain(const wchar_t * CmdLine) Line 169	C++
+ 	UE4Editor-Win64-DebugGame.exe!WinMain(HINSTANCE__ * hInInstance, HINSTANCE__ * hPrevInstance, char * __formal, int nCmdShow) Line 255	C++
