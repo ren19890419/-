@@ -1,0 +1,20 @@
+ 	UE4Editor-D3D11RHI.dll!FD3D11DynamicRHI::RHIDrawIndexedPrimitive(FRHIBuffer * IndexBufferRHI, int BaseVertexIndex, unsigned int FirstInstance, unsigned int NumVertices, unsigned int StartIndex, unsigned int NumPrimitives, unsigned int NumInstances) Line 1736	C++
+ 	[Inline Frame] UE4Editor-Renderer.dll!FRHICommandList::DrawIndexedPrimitive(FRHIBuffer * BaseVertexIndex, int NumVertices, unsigned int StartIndex, unsigned int NumInstances, unsigned int) Line 3068	C++
+ 	UE4Editor-Renderer.dll!FMeshDrawCommand::SubmitDraw(const FMeshDrawCommand & MeshDrawCommand, const Experimental::TRobinHoodHashSet<FGraphicsMinimalPipelineStateInitializer,DefaultKeyFuncs<FGraphicsMinimalPipelineStateInitializer,0>,TSizedDefaultAllocator<32>> & GraphicsMinimalPipelineStateSet, FRHIBuffer * ScenePrimitiveIdsBuffer, int PrimitiveIdOffset, unsigned int InstanceFactor, FRHICommandList & RHICmdList, FMeshDrawCommandStateCache & StateCache) Line 1162	C++
+ 	UE4Editor-Renderer.dll!SubmitMeshDrawCommandsRange(const TArray<FVisibleMeshDrawCommand,TMemStackAllocator<0>> & VisibleMeshDrawCommands, const Experimental::TRobinHoodHashSet<FGraphicsMinimalPipelineStateInitializer,DefaultKeyFuncs<FGraphicsMinimalPipelineStateInitializer,0>,TSizedDefaultAllocator<32>> & GraphicsMinimalPipelineStateSet, FRHIBuffer * PrimitiveIdsBuffer, int BasePrimitiveIdsOffset, bool bDynamicInstancing, int StartIndex, int NumMeshDrawCommands, unsigned int InstanceFactor, FRHICommandList & RHICmdList) Line 1245	C++
+ 	UE4Editor-Renderer.dll!FParallelMeshDrawCommandPass::DispatchDraw(FParallelCommandListSet * ParallelCommandListSet, FRHICommandList & RHICmdList) Line 1350	C++
+ 	UE4Editor-Renderer.dll!FMobileSceneRenderer::RenderMobileBasePass(FRHICommandListImmediate & RHICmdList, const TArrayView<FViewInfo const *,int> PassViews) Line 326	C++
+>	UE4Editor-Renderer.dll!FMobileSceneRenderer::RenderForward(FRHICommandListImmediate & RHICmdList, const TArrayView<FViewInfo const *,int> ViewList) Line 880	C++
+ 	UE4Editor-Renderer.dll!FMobileSceneRenderer::Render(FRHICommandListImmediate & RHICmdList) Line 658	C++
+ 	UE4Editor-Renderer.dll!RenderViewFamily_RenderThread(FRHICommandListImmediate & RHICmdList, FSceneRenderer * SceneRenderer) Line 3608	C++
+ 	UE4Editor-Renderer.dll!FRendererModule::BeginRenderingViewFamily::__l35::<lambda>(FRHICommandListImmediate & RHICmdList) Line 3867	C++
+ 	UE4Editor-Renderer.dll!TEnqueueUniqueRenderCommandType<`FRendererModule::BeginRenderingViewFamily'::`35'::FDrawSceneCommandName,void <lambda>(FRHICommandListImmediate &)>::DoTask(ENamedThreads::Type CurrentThread, const TRefCountPtr<FGraphEvent> & MyCompletionGraphEvent) Line 183	C++
+ 	UE4Editor-Renderer.dll!TGraphTask<TEnqueueUniqueRenderCommandType<`FRendererModule::BeginRenderingViewFamily'::`35'::FDrawSceneCommandName,void <lambda>(FRHICommandListImmediate &)>>::ExecuteTask(TArray<FBaseGraphTask *,TSizedDefaultAllocator<32>> & NewTasks, ENamedThreads::Type CurrentThread) Line 886	C++
+ 	[Inline Frame] UE4Editor-Core.dll!FBaseGraphTask::Execute(TArray<FBaseGraphTask *,TSizedDefaultAllocator<32>> & CurrentThread, ENamedThreads::Type) Line 524	C++
+ 	UE4Editor-Core.dll!FNamedTaskThread::ProcessTasksNamedThread(int QueueIndex, bool bAllowStall) Line 709	C++
+ 	UE4Editor-Core.dll!FNamedTaskThread::ProcessTasksUntilQuit(int QueueIndex) Line 601	C++
+ 	UE4Editor-RenderCore.dll!RenderingThreadMain(FEvent * TaskGraphBoundSyncEvent) Line 373	C++
+ 	UE4Editor-RenderCore.dll!FRenderingThread::Run() Line 528	C++
+ 	UE4Editor-Core.dll!FRunnableThreadWin::Run() Line 86	C++
+ 	UE4Editor-Core.dll!FRunnableThreadWin::GuardedRun() Line 27	C++
+ 	[External Code]	
