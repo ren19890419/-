@@ -1,0 +1,4 @@
+[UE4]error C4003: not enough arguments for function-like macro invocation "IntPoint"
+
+引用第三方头文件的时候
+IntPoint 被定义成宏了
