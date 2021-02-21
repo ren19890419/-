@@ -1,0 +1,16 @@
+UATHelper: Packaging (iOS):   ERROR: Unable to determine home directory for remote user. SSH output:
+UATHelper: Packaging (iOS):            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Permissions 0775 for '/cygdrive/C/Users/ren19/AppData/Roaming/Unreal Engine/UnrealBuildTool/SSHKeys/192.168.1.3/mac/RemoteToolChainPrivate.key' 
+are too open.It is recommended that your private key files are NOT accessible by others.This private key will be ignored.bad permissions: ignore key: /cygdrive/C/Users/ren19/AppData/Roaming/Unreal Engine/UnrealBuildTool/SSHKeys/192.168.1.3/mac/RemoteToolChainPrivate.keyPermission denied (publickey,password,keyboard-interactive).
+PackagingResults: Error: Unable to determine home directory for remote user. SSH output:
+PackagingResults: Warning: UNPROTECTED PRIVATE KEY FILE!          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Permissions 0775 for '/cygdrive/C/Users/ren19/AppData/Roaming/Unreal Engine/UnrealBuildTool/SSHKeys/192.168.1.3/mac/RemoteToolChainPrivate.key' are too open.It is recommended that your private key files are NOT accessible by others.Th
+is private key will be ignored.bad permissions: ignore key: /cygdrive/C/Users/ren19/AppData/Roaming/Unreal Engine/UnrealBuildTool/SSHKeys/192.168.1.3/mac/RemoteToolChainPrivate.keyPermission denied (publickey,password,keyboard-interactive).
+
+C:\Users\ren19\AppData\Roaming\Unreal Engine\UnrealBuildTool\SSHKeys\192.168.1.3\mac
+修改RemoteToolChainPrivate.key 权限
+
+参考给用户添加特殊权限
+https://blog.csdn.net/weixin_30500289/article/details/98239527
+http://jingyan.baidu.com/article/afd8f4de9fd3d634e386e950.html
+
+
+然后给文件RemoteToolChainPrivate.key 特殊权限
