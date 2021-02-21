@@ -14,3 +14,5 @@ http://jingyan.baidu.com/article/afd8f4de9fd3d634e386e950.html
 
 
 然后给文件RemoteToolChainPrivate.key 特殊权限
+右键-》属性->安全-》高级-》权限-》显示高级权限
+除了1.完全控制 2.遍历文件夹/执行文件 之外全部勾选
