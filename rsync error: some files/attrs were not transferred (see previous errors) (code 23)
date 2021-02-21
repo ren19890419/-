@@ -1,0 +1,11 @@
+UATHelper: Packaging (iOS):     rsync: mkstemp "/Users/mac/UE4/Builds/DESKTOP-RHFKQ3R/D/UnrealEngine/Engine/Source/Programs/UnrealBuildTool/Platform/Windows/.VCToolChain - ����.cs.u1Sco3" failed: Illegal byte sequence (92)
+UATHelper: Packaging (iOS):   
+UATHelper: Packaging (iOS):     sent 4531425324 bytes  received 2370642 bytes  2405834.95 bytes/sec
+UATHelper: Packaging (iOS):     total size is 14519501654  speedup is 3.20
+UATHelper: Packaging (iOS):     rsync error: some files/attrs were not transferred (see previous errors) (code 23) at /home/lapo/packaging/rsync-3.0.4-1/src/rsync-3.0.4/main.c(1040) [sender=3.0.4]
+UATHelper: Packaging (iOS):   ERROR: Error while running Rsync (exit code 23)
+PackagingResults: Error: some files/attrs were not transferred (see previous errors) (code 23) at /home/lapo/packaging/rsync-3.0.4-1/src/rsync-3.0.4/main.c(1040) [sender=3.0.4]
+PackagingResults: Error: Error while running Rsync (exit code 23)
+
+
+windows rsync到mac 路径中有中文。解决方法，去掉中文
