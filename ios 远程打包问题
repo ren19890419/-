@@ -16,3 +16,27 @@ http://jingyan.baidu.com/article/afd8f4de9fd3d634e386e950.html
 然后给文件RemoteToolChainPrivate.key 特殊权限
 右键-》属性->安全-》高级-》权限-》显示高级权限
 除了1.完全控制 2.遍历文件夹/执行文件 之外全部勾选
+
+
+下载subinacl.exe
+Copy file subinacl.exe to the installation directory of the program that is requesting subinacl.exe.
+If that doesn't work, you will have to copy subinacl.exe to your system directory. By default, this is:
+Windows 95/98/Me - C:\Windows\System
+Windows NT/2000 - C:\WINNT\System32
+Windows XP, Vista, 7, 10 - C:\Windows\System32
+If you use a 64-bit version of Windows, you should also copy subinacl.exe to C:\Windows\SysWOW64\
+Make a backup copy of the original files
+Overwrite any existing files
+Reboot your computer.
+If the problem still occurs, try the following:
+Open Windows Start menu and select "Run...".
+Type CMD and press Enter (or if you use Windows ME, type COMMAND)
+Type regsvr32 subinacl.exe and press Enter.
+
+If you can't find windows directory try the following:
+Open Windows Start menu and select "Run...".
+Type CMD and press Enter (or if you use Windows ME, type COMMAND)
+Type %WINDIR% and press Enter.
+
+最后执行
+SubInACL /File "C:\Users\ren19\AppData\Roaming\Unreal Engine\UnrealBuildTool\SSHKeys\192.168.1.3\mac\RemoteToolChainPrivate.key" /setprimarygroup=Users
