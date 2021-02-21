@@ -5,3 +5,7 @@ Entry name *.xml collided终极解决方案
 D:\MyWorkSpace\Unreal_Projects\kbengine_ue4_mmo\Intermediate\Android\arm64
 重新再打一次解决
 
+
+androidstudio 中 报Entry name 'res/layout/notification_action.xml' collided错
+
+点build，clear project清除一下缓存就好了
