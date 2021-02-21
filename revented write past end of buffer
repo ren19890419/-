@@ -1,0 +1,13 @@
+
+闪退 lua
+revented write past end of buffer. Calling abort().
+Aborted 
+
+
+解决方法：
+
+在你自己项目的Andriod.mk 里面为gcc添加一个编译选项： LOCAL_CFLAGS += -D_FORTIFY_SOURCE=0，就可以了。
+
+也有可能会报 FORTIFY_SOURCE 重复定义的问题， 原因是已经有别的Android.mk 定义这个编译选项了。
+
+解决方法是：LOCAL_CFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0  这样就ok了。
