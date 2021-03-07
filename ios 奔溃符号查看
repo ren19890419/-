@@ -9,10 +9,6 @@ yoursymbolicatecrashdir your.crash your.dSYM >crashlog.crash
 记得把命令中的文件路径替换为自己的文件路径
 
 
-/Applications/Xcode.app//Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash /Users/zl3d/Desktop/Azure-2020-11-05-120959.ips /Users/zl3d/Desktop/Azure-IOS-Shipping_197093_0.761.dSYM > crashlog.log
-
-
-
 我的电脑上
 export DEVELOPER_DIR="/Applications/Xcode.app//Contents/Developer"
 
