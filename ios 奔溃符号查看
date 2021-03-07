@@ -10,3 +10,11 @@ yoursymbolicatecrashdir your.crash your.dSYM >crashlog.crash
 
 
 /Applications/Xcode.app//Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash /Users/zl3d/Desktop/Azure-2020-11-05-120959.ips /Users/zl3d/Desktop/Azure-IOS-Shipping_197093_0.761.dSYM > crashlog.log
+
+
+
+我的电脑上
+export DEVELOPER_DIR="/Applications/Xcode.app//Contents/Developer"
+
+ /Applications/Xcode.app//Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash /Users/mac/Downloads/CatchMe.ips /Users/mac/Downloads/CatchMe-IOS-Shipping.dSYM  > /Users/mac/Downloads/crashlog.log
+ 
