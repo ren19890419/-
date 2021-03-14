@@ -1,0 +1,10 @@
+UE4 MapCheck: Error: WorldSettings_1 Maps need lighting rebuilt
+
+
+
+   如果使用源码版本的UE4引擎，经常会出现需要重新构建光照的红字提示，然后你去按照提示构建光照，就会报错，继续给你弹出该提示。其实这时候要相信自己，它仅仅是因为使用源码版本构建引擎的时候，默认不会编译UnrealLightMass这个程序，而构建光照刚好就是使用的该程序，你只需要在VS里面的Programs下边选中UnrealLightMass这个工程，重新编译就能解决问题。
+
+          同理，其实你还能发现很多源码版本默认没有编译的程序，UnrealInsights, UnrealMultiUserServer, UnrealPak等等，小手动一动选中项目编译一下吧。
+————————————————
+版权声明：本文为CSDN博主「执手画眉弯」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/l346242498/article/details/106235472/
