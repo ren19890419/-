@@ -1,0 +1,61 @@
+安装安卓sdk
+ue4 的安卓sdk与普通安卓开发的sdk不同，需要安装CodeWorks for Android 1R7u1 套件，文档地址https://docs.unrealengine.com/zh-CN/Platforms/Mobile/Android/InstallingAndroidCodeWorksAndroid/index.html因为国内网络问题，在线安装可能不可行，需要本地安装
+下载地址：https://pan.baidu.com/s/1CC15...
+提取码：mih1
+下载后解压 在ue4中配置
+image.png
+
+image.png
+
+image.png
+
+打包时选择
+image.png
+
+更多详情请查看官方文档
+安卓快速入门
+
+安卓打包
+
+创建ios
+ios打包需要ios证书需要注册苹果开发者账号 支付￥688，另外还需要一台安装xcode11以上版本的mac。
+创建好证书后下载到windows上
+导入证书并填写bundle信息，display name 是你app的name 安装app后会显示在app图标下方，包辨识符为创建证书时填入的类似于com.xxx.xxx之类。
+image.png
+
+配置mac远程编译
+image.png
+
+远程服务器命名为你mac的ip地址
+重新同步用户名为你mac的用户名
+填写后点击生成SSH键
+
+第一步，提示输入yes或者no，键入yes，Enter键继续
+
+第二步，提示键入password，键入mac的登录密码，Enter键继续
+
+第三步，提示键入passphrase，不键入任何内容，继续
+
+第四步，最后一步，提示键入password键入，mac的登录密码，Enter键关闭窗口，等待一下，会看到生成了SSH key文件链接内容
+
+然后就可以打包编译
+如果报错UATHelper: Packaging (iOS):   ERROR: Unable to determine home directory for remote user. SSH output:
+UATHelper: Packaging (iOS):    WARNING: UNPROTECTED PRIVATE KEY FILE!          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Permissions 0660 for '/cygdrive/C/Users/28329/AppData/Roaming/Unreal Engine/UnrealBuildTool/SSHKeys/192.168.15.159/wxiaop/RemoteToolChainPrivate
+.key' are too open.It is recommended that your private key files are NOT accessible by others.This private key will be ignored.bad permissions: ignore key: /cygdrive/C/Users/2129/AppData/Roaming/Unreal Engine/UnrealBuildTool/SSHKeys/192.168.15.159/wxiaop/RemoteToolChainPrivate.keyPermission denied (publickey,password,keyboard-interactive).
+key'太开放。建议您的私钥文件不能被他人访问。此私钥将被忽略。权限不足：忽略密钥：
+
+被拒绝（公钥，密码，键盘交互）。
+PackagingResults：错误：无法确定远程用户的主目录。 SSH输出：
+包装结果：警告：未保护的私钥文件
+解决办法：
+使用Cygwin 名为RemoteToolChainPrivate.key的文件，因此使用chgrp将组设置为Users，使用chmod将访问权限设置为600。
+
+首先 cd 进入密钥存在的文件夹下C:Users2129AppDataRoamingUnreal EngineUnrealBuildToolSSHKeys192.168.15.159wxiaop
+
+组设置为Users：
+
+ chgrp Users ./RemoteToolChainPrivate.key
+
+访问权限设置为600。
+chmod 600 ./RemoteToolChainPrivate.key
+Cygwin安装教程参考：https://blog.csdn.net/u010356768/article/details/90756742
