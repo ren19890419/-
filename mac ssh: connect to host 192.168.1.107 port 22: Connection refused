@@ -1,0 +1,9 @@
+ssh: connect to host 192.168.1.107 port 22: Connection refused 的解决方法
+
+
+到偏好设置里，到共享里。
+
+
+把远程登录打上√，然后点好
+
+登录用户添加上
