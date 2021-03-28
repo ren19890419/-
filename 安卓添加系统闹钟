@@ -1,0 +1,88 @@
+package com.chongzixin.alarmclock;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.provider.AlarmClock;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "alarmclock" + ".MainActivity";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button mBtn = (Button) findViewById(R.id.button);
+        mBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Context context = getApplicationContext();
+
+                Intent alarmClockIntent = new Intent(AlarmClock.ACTION_SET_ALARM);
+                Calendar cal = new GregorianCalendar();
+                alarmClockIntent.putExtra(AlarmClock.EXTRA_HOUR, cal.get(Calendar.HOUR_OF_DAY));
+                alarmClockIntent.putExtra(AlarmClock.EXTRA_MINUTES, cal.get(Calendar.MINUTE) + 1);
+                alarmClockIntent.putExtra(AlarmClock.EXTRA_SKIP_UI, true);
+                alarmClockIntent.putExtra(AlarmClock.EXTRA_MESSAGE, "888888888Ren");
+                alarmClockIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                ComponentName componentName  = alarmClockIntent.resolveActivity(getPackageManager());
+                if (componentName != null) {
+                    startActivity(alarmClockIntent);
+                } else {
+                    // TODO: I have no idea how to handle this
+                    startActivity(alarmClockIntent);
+                    Log.e(TAG, "There is no alarm clock app");
+                }
+            }
+
+            public void setAlarm(View view) {
+                Context context = getApplicationContext();
+
+                setAlarm2();
+
+                Intent intent = new Intent(context, AlarmReceiver.class);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+
+                long nextTrigger = System.currentTimeMillis()+10000;
+                Log.i(TAG, System.currentTimeMillis() + ": scheduling next alarm at " + nextTrigger);
+
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+                AlarmManager.AlarmClockInfo ac = new AlarmManager.AlarmClockInfo(nextTrigger, null);
+                alarmManager.setAlarmClock(ac, pendingIntent);
+            }
+        });
+    }
+
+    private void setAlarm2() {
+        Context context = getApplicationContext();
+
+        Intent alarmClockIntent = new Intent(AlarmClock.ACTION_SET_ALARM);
+        Calendar cal = new GregorianCalendar();
+        alarmClockIntent.putExtra(AlarmClock.EXTRA_HOUR, cal.get(Calendar.HOUR_OF_DAY));
+        alarmClockIntent.putExtra(AlarmClock.EXTRA_MINUTES, cal.get(Calendar.MINUTE) + 1);
+        alarmClockIntent.putExtra(AlarmClock.EXTRA_SKIP_UI, true);
+        alarmClockIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (alarmClockIntent.resolveActivity(context.getPackageManager()) != null) {
+            startActivity(alarmClockIntent);
+        } else {
+            // TODO: I have no idea how to handle this
+            Log.e(TAG, "There is no alarm clock app");
+        }
+    }
+
+
+}
