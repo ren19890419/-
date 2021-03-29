@@ -1,0 +1,24 @@
+https://blog.51cto.com/ngames/1611395
+
+rsync
+skipping non-regular file
+
+增加参数 -va
+void UploadDirectory(DirectoryReference LocalDirectory, string RemoteDirectory, List<FileReference> FilterLocations)
+		{
+			List<string> Arguments = new List<string>(CommonRsyncArguments);
+			Arguments.Add(String.Format("--rsync-path=\"mkdir -p {0} && rsync\"", RemoteDirectory));
+			foreach(FileReference FilterLocation in FilterLocations)
+			{
+				Arguments.Add(String.Format("-va --filter=\"merge {0}\"", GetLocalCygwinPath(FilterLocation)));
+			}
+			Arguments.Add("--exclude='*'");
+			Arguments.Add(String.Format("\"{0}/\"", GetLocalCygwinPath(LocalDirectory)));
+			Arguments.Add(String.Format("\"{0}@{1}\":'{2}/'", UserName, ServerName, RemoteDirectory));
+
+			int Result = Rsync(String.Join(" ", Arguments));
+			if(Result != 0)
+			{
+				throw new BuildException("Error while running Rsync (exit code {0})", Result);
+			}
+		}
