@@ -4,6 +4,11 @@ rsync
 skipping non-regular file
 
 增加参数 -va
+
+
+D:\UnrealEngine\Engine\Source\Programs\UnrealBuildTool\ToolChain\RemoteMac.cs	929	96
+
+
 void UploadDirectory(DirectoryReference LocalDirectory, string RemoteDirectory, List<FileReference> FilterLocations)
 		{
 			List<string> Arguments = new List<string>(CommonRsyncArguments);
