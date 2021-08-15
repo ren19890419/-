@@ -1,0 +1,8 @@
+visual studio installer 安装路径
+
+vs 插件安装临时存放目录 vsix 
+C:\Users\ren19\AppData\Local\Temp
+
+插件vsix 没有安装，但是安装的时候一直提示已经安装过了
+Installer 删了重装
+C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service
