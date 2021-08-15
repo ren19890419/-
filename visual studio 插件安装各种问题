@@ -6,3 +6,7 @@ C:\Users\ren19\AppData\Local\Temp
 插件vsix 没有安装，但是安装的时候一直提示已经安装过了
 Installer 删了重装
 C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service
+
+
+
+"C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service\vsixinstaller.exe" /appidinstallpath:"D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.exe" /skuName:Enterprise /skuVersion:16.11.31605.320 /appidname:"Microsoft Visual Studio Enterprise 2019"  /culture:"zh-CN"  /noep "C:\Users\ren19\AppData\Local\Temp\VSIX54sq3p1u.vsix" 	
