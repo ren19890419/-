@@ -1,0 +1,6 @@
+Fatal error: [File:D:/UnrealEngine/Engine/Source/Editor/UnrealEd/Private/EditorEngine.cpp] [Line: 7262] 
+Previously active world /Temp/Untitled_1.Untitled not cleaned up by garbage collection! Referenced by:
+(root) GCObjectReferencer /Engine/Transient.GCObjectReferencer_0::AddReferencedObjects(): Unknown FGCObject
+ (PendingKill) World /Temp/Untitled_1.Untitled
+ 
+ 这句话意思是GCObjectReferencer 被NewObject 并且 AddToRoot 了两次， 解决办法，断点找到什么地方多次NewObject，干掉。。。
