@@ -3,4 +3,10 @@ Previously active world /Temp/Untitled_1.Untitled not cleaned up by garbage coll
 (root) GCObjectReferencer /Engine/Transient.GCObjectReferencer_0::AddReferencedObjects(): Unknown FGCObject
  (PendingKill) World /Temp/Untitled_1.Untitled
  
+ 1.
  这句话意思是GCObjectReferencer 被NewObject 并且 AddToRoot 了两次， 解决办法，断点找到什么地方多次NewObject，干掉。。。
+ 
+ 2.
+ UWorld /Temp/Untitled_1.Untitled 被GCObjectReferencer_0::AddReferencedObjects() 方式添加到了引用，阻止了GC，需要干掉
+ 
+ 
