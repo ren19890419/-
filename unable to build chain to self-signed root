@@ -1,0 +1,33 @@
+原因分析：
+关键点在于这一句：unable to build chain to self-signed root
+
+猜测一定和证书有关，而且问题出在这一个root，也就是根证书出问题了
+
+经搜索后发现，苹果开发者有一个根证书：Apple Worldwide Developer Relations Certification Authority
+
+简称是：AppleWWDRCA
+
+根证书要么过期了，要么是放的位置不对，要么是个数不对
+
+正确的开发根证书：应该是在 钥匙串 -> 系统里面，有且只有一份
+
+解决方案：
+先从钥匙串中，把旧的 AppleWWDRCA删除
+
+从网上下载 苹果开发者根证书最新版：Apple Worldwide Developer Relations Certificate Authority (Expiring 02/20/2030)
+
+导入到 钥匙串 -> 系统里 （注意：不能放在 登录里），
+
+如图所示：
+
+
+
+最后，再顺手清理一下：
+历史描述文件：~/Library/MobileDevice/Provisioning Profiles
+
+历史构建产物：/用户/beyond/Library/Developer/Xcode/DerivedData/
+
+https://blog.csdn.net/pre_eminent/article/details/114756030
+————————————————
+版权声明：本文为CSDN博主「pre_eminent」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/pre_eminent/article/details/114756030
