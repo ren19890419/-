@@ -10,3 +10,23 @@ C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHu
 
 
 "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service\vsixinstaller.exe" /appidinstallpath:"D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.exe" /skuName:Enterprise /skuVersion:16.11.31605.320 /appidname:"Microsoft Visual Studio Enterprise 2019"  /culture:"zh-CN"  /noep "C:\Users\ren19\AppData\Local\Temp\VSIX54sq3p1u.vsix" 	
+
+
+
+2021/9/25 23:06:38 - System.IO.FileLoadException: 未能加载文件或程序集“Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”
+   在 VSIXInstaller.SupportedSKUs.AddInstalledIsolatedShells(Version vsVersion, IntPtr userToken)
+   在 VSIXInstaller.SupportedSKUs.InitializeSupportedSKUs(IntPtr userToken)
+   在 VSIXInstaller.ExtensionService.InitializeSupportedSKUs(ICommandLineData cmdLineData, IntPtr duplicatedUserToken)
+   在 VSIXInstaller.App.Initialize(Boolean isRepairSupported)
+   在 VSIXInstaller.App.Initialize()
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+
+警告: 程序集绑定日志记录被关闭。
+要启用程序集绑定失败日志记录，请将注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD)设置为 1。
+注意: 会有一些与程序集绑定失败日志记录关联的性能损失。
+要关闭此功能，请移除注册表值 [HKLM\Software\Microsoft\Fusion!EnableLog]。
+
+前往链接下载 https://www.nuget.org/packages/Microsoft.VisualStudio.Validation/15.3.15 版本用WinRar解压放到如下目录
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE
